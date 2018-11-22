@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/black_transparent_80">
+    <RelativeLayout
+        android:id="@+id/rl_update_progress"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="20dp"
+        android:background="#ffffff"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#ff4a57"
+            android:layout_above="@+id/my_progress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp" />
+        <ProgressBar
+            android:id="@+id/my_progress"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:max="100"
+            android:progress="0"
+            android:secondaryProgress="5"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="20dp"
+            style="?android:attr/progressBarStyleHorizontal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_update_content"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#ffffff"
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/tv_tip_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发现新版本"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FBFBFB"
+            android:layout_below="@+id/tv_tip_title"
+            android:layout_marginTop="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_tip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发现新版本"
+            android:textSize="16sp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FBFBFB"
+            android:layout_above="@+id/control"
+            android:layout_marginTop="14dp"/>
+
+        <LinearLayout
+            android:id="@+id/control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:weightSum="2">
+            <TextView
+                android:id="@+id/tv_tip_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="立即更新"
+
+                android:gravity="center"
+                android:padding="14dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#FBFBFB" />
+
+            <TextView
+                android:id="@+id/tv_tip_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="下次再说"
+                android:gravity="center"
+                android:padding="14dp"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

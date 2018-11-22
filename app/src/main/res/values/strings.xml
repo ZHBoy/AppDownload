@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AppDownload</string>
+
+    <string name="permission_error">您关闭了某些权限，部分功能无法使用，请到设置-应用-权限中打开</string>
+
+</resources>
